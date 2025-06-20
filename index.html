@@ -1,1 +1,198 @@
-Hello world
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danushka Bandara, PhD - Faculty Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+        .section-header {
+            @apply text-4xl font-bold mb-8 text-gray-800;
+        }
+        .card {
+            @apply bg-white p-6 rounded-lg shadow-lg mb-6;
+        }
+        .hero {
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        .hero-content {
+            @apply text-center text-white z-10;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for text readability */
+            padding: 2rem;
+            border-radius: 0.5rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Navigation -->
+    <nav class="bg-blue-900 text-white sticky top-0 z-10">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold">Danushka Bandara, PhD</h1>
+            <ul class="flex space-x-6">
+                <li><a href="#home" class="hover:underline">Home</a></li>
+                <li><a href="#research" class="hover:underline">Research</a></li>
+                <li><a href="#teaching" class="hover:underline">Teaching</a></li>
+                <li><a href="#service" class="hover:underline">Service</a></li>
+                <li><a href="#contact" class="hover:underline">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Video Background -->
+    <section id="home" class="hero">
+        <video autoplay muted loop playsinline>
+            <source src="https://videos.pexels.com/video-files/5473970/5473970-hd_1920_1080_30fps.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-content">
+            <h1 class="text-5xl font-bold mb-4">Danushka Bandara, PhD</h1>
+            <p class="text-xl mb-6">Assistant Professor of Computer Science and Engineering</p>
+            <p class="text-lg">Fairfield University | Specializing in Machine Learning and Human-Computer Interaction</p>
+            <a href="#research" class="mt-6 inline-block bg-blue-600 text-white py-2 px-6 rounded hover:bg-blue-700">Explore My Research</a>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="py-12">
+        <div class="container mx-auto px-4">
+            <h2 class="section-header text-center">Research</h2>
+            <p class="text-lg text-center mb-8">My research focuses on advancing machine learning and human-computer interaction, with applications in brain-computer interfaces, emotion recognition, and cultural heritage preservation.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="card">
+                    <h3 class="text-2xl font-semibold mb-4">Selected Publications</h3>
+                    <ul class="list-disc pl-6">
+                        <li><strong>2025:</strong> Bandara, D., et al. Classification of Human Trust in AI Using Brain Activity Data. <em>Northeast Journal of Complex Systems</em>.</li>
+                        <li><strong>2024:</strong> Bandara, D., Riccardi, K. Graph Node Classification to Predict Autism Risk in Genes. <em>Genes, 15</em>, 447. <a href="https://doi.org/10.3390/genes15040447" class="text-blue-600 hover:underline">DOI</a></li>
+                        <li><strong>2023:</strong> Bandara, D., et al. Identifying Distinguishing Acoustic Features in Felid Vocalizations. <em>Acoustics Australia</em>, 1-13.</li>
+                        <li><strong>2020:</strong> Bandara, D., et al. Identification of Potential Task Shedding Events Using Brain Activity Data. <em>Augmented Human Research, 5</em>, 1-15.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3 class="text-2xl font-semibold mb-4">Grants</h3>
+                    <ul class="list-disc pl-6">
+                        <li><strong>2024:</strong> IMLS Research Grant (Subaward) - Collaborator ($1.48M, Self: $3,355)</li>
+                        <li><strong>2023-2024:</strong> NASA Connecticut Space Grant Consortium - PI ($20,000)</li>
+                        <li><strong>2023:</strong> Fairfield University Summer Research Stipend - PI ($5,500)</li>
+                        <li><strong>2020-2024:</strong> Startup Request for Equipment, Salary, Travel - PI ($50,000)</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3 class="text-2xl font-semibold mb-4">Research Advising</h3>
+                    <ul class="list-disc pl-6">
+                        <li><strong>2024-2025:</strong> Graduate Capstone Project (Habibul Haq, Raqibul Haque, Mohammed Feroz Shaikh)</li>
+                        <li><strong>2024 Summer:</strong> Undergraduate Summer Research Residency (Faizah Chowdhury)</li>
+                        <li><strong>2021-2022:</strong> Masters Thesis (Kyle Riccardi)</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3 class="text-2xl font-semibold mb-4">Conference Presentations</h3>
+                    <ul class="list-disc pl-6">
+                        <li><strong>2025:</strong> Classification of Human Trust in AI Using Brain Activity Data, Northeast Regional Conference on Complex Systems, Binghamton, NY</li>
+                        <li><strong>2024:</strong> The Role of Trust in Human-Computer Interaction Using fNIRS, Yale fNIRS Workshop, New Haven, CT</li>
+                        <li><strong>2024:</strong> Logical Fallacy Detection in Text, International Conference on Computer Technology and Information Science, Ordos, China</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teaching Section -->
+    <section id="teaching" class="py-12 bg-gray-200">
+        <div class="container mx-auto px-4">
+            <h2 class="section-header text-center">Teaching</h2>
+            <div class="card">
+                <h3 class="text-2xl font-semibold mb-4">Courses Taught</h3>
+                <ul class="list-disc pl-6">
+                    <li><strong>Fall 2020:</strong> CPSC1101 Introduction to Computing (UG) - IDEA Score: 4.3/5</li>
+                    <li><strong>Fall 2021:</strong> SWEG5360 Machine Learning (GRAD) - IDEA Score: 4.5/5</li>
+                    <li><strong>Fall 2021:</strong> SWEG5427 Operating Systems and Programming (GRAD) - IDEA Score: 5.0/5</li>
+                    <li><strong>Spring 2022:</strong> CPSC4525 Human-Computer Interaction (UG) - IDEA Score: 4.2/5</li>
+                    <li><strong>Fall 2024:</strong> SWEG6962 Capstone Professional Project (GRAD) - IDEA Score: 4.5/5</li>
+                </ul>
+                <h3 class="text-2xl font-semibold mt-6 mb-4">Pedagogical Development</h3>
+                <ul class="list-disc pl-6">
+                    <li><strong>2025:</strong> Focus on Teaching and Learning Conference, Loyola University</li>
+                    <li><strong>2023:</strong> DELTA Junior Faculty Development Workshop, ASEE</li>
+                    <li><strong>2021:</strong> CAE Course Design Workshop, Fairfield University</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Section -->
+    <section id="service" class="py-12">
+        <div class="container mx-auto px-4">
+            <h2 class="section-header text-center">Service</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="card">
+                    <h3 class="text-2xl font-semibold mb-4">Department & University</h3>
+                    <ul class="list-disc pl-6">
+                        <li><strong>2023-:</strong> Computer Science Curriculum Review, Fairfield University</li>
+                        <li><strong>2023:</strong> Search Committee for CS TT Assistant Professor</li>
+                        <li><strong>2025-:</strong> Handbook Committee (University Advancement Committee)</li>
+                        <li><strong>2023-2024:</strong> Executive Committee, Faculty of Color Group</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3 class="text-2xl font-semibold mb-4">Profession & Community</h3>
+                    <ul class="list-disc pl-6">
+                        <li>Ad Hoc Reviewer for <em>Nature Scientific Reports</em>, <em>IEEE Transactions on Knowledge and Data Engineering</em></li>
+                        <li>Guest Editor, Special Issue on Learning from Information Networks, <em>MDPI Electronics</em></li>
+                        <li><strong>2023:</strong> Volunteer Judge, Connecticut Science and Engineering Fair</li>
+                        <li><strong>2019-2020:</strong> Docent, Corning Museum of Glass</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-12 bg-gray-200">
+        <div class="container mx-auto px-4">
+            <h2 class="section-header text-center">Contact</h2>
+            <div class="card">
+                <p><strong>Email:</strong> danushkabandara@gmail.com</p>
+                <p><strong>Institution:</strong> Fairfield University, Computer Science and Engineering</p>
+                <h3 class="text-2xl font-semibold mt-6 mb-4">Get in Touch</h3>
+                <div class="mt-4">
+                    <p class="text-gray-600 mb-4">Note: Form submission is disabled in this sandboxed environment. Please email me directly.</p>
+                    <input type="text" placeholder="Your Name" class="w-full p-2 mb-4 border rounded" disabled>
+                    <input type="email" placeholder="Your Email" class="w-full p-2 mb-4 border rounded" disabled>
+                    <textarea placeholder="Your Message" class="w-full p-2 mb-4 border rounded" rows="4" disabled></textarea>
+                    <button class="bg-blue-600 text-white py-2 px-6 rounded hover:bg-blue-700" disabled>Send Message</button>
+                </div>
+                <h3 class="text-2xl font-semibold mt-6 mb-4">References</h3>
+                <ul class="list-disc pl-6">
+                    <li>Dr. Ashley Byun, Associate Professor, Department of Biology, Fairfield University (sbyun@fairfield.edu)</li>
+                    <li>Dr. Sarah Bratt, Assistant Professor, School of Information, University of Arizona (sebratt@arizona.edu)</li>
+                    <li>Dr. Sabnam Ghosh, Assistant Professor, Washington University at St. Louis (sabnam.ghosh@outlook.com)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2025 Danushka Bandara. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
