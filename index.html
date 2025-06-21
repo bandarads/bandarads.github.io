@@ -10,7 +10,8 @@
             font-family: 'Arial', sans-serif;
         }
         .section-header {
-            @apply text-4xl font-bold mb-8 text-gray-800;
+            font-size: 50px !important; /* Direct CSS for ~60px, overriding any conflicts */
+            @apply text-8xl font-bold mb-8 text-gray-800; 
         }
         .card {
             @apply bg-white p-6 rounded-lg shadow-lg mb-6;
