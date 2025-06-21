@@ -44,6 +44,23 @@
         .hero-content a {
             color: white !important; /* Explicitly set all text to white with high specificity */
         }
+        .gallery {
+            @apply grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6;
+        }
+        .gallery div {
+            width: 300px; /* Fixed width for uniform size */
+            height: 200px; /* Fixed height for uniform size */
+            @apply rounded-lg shadow-md overflow-hidden; /* Rounded corners and shadow */
+        }
+        .gallery img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Preserve aspect ratio without cropping */
+            @apply rounded-lg;
+        }
+        .gallery-caption {
+            @apply text-sm text-gray-600 mt-2 text-center;
+        }
     </style>
 </head>
 <body class="bg-white-80">
@@ -146,6 +163,20 @@
     <section id="teaching" class="py-12 bg-gray-200">
         <div class="container mx-auto px-4">
             <h2 class="section-header text-center">Teaching</h2>
+             <div class="gallery">
+                <div>
+                    <img src="./IMG_6924.jpg" alt="In class activity">
+                    <p class="gallery-caption">Students taking part in in class group activity </p>
+                </div>
+                <div>
+                    <img src="./IMG_2685.jpg" alt="ideation">
+                    <p class="gallery-caption">Ideation session with the students</p>
+                </div>
+                <div>
+                    <img src="./staghack.jpg" alt="hackathon">
+                    <p class="gallery-caption">Helping a student debug at the Fairfield University Hackathon event</p>
+                </div>
+            </div>
             <div class="card">
                 <h3 class="text-2xl font-semibold mb-4">Courses Taught</h3>
                 <ul class="list-disc pl-6">
