@@ -45,31 +45,33 @@
             color: white !important; /* Explicitly set all text to white with high specificity */
         }
       .gallery {
-            @apply flex flex-row nowrap gap-4 mt-6 overflow-x-auto; /* Enforce single row with horizontal scroll */
+            @apply flex flex-row nowrap justify-center gap-4 mt-6 overflow-x-auto; /* Center images horizontally */
         }
         .gallery div {
+            @apply flex flex-col items-center; /* Stack image and caption vertically, centered */
             width: 300px; /* Fixed width for uniform size */
-            height: 200px; /* Fixed height for uniform size */
             flex: 0 0 300px; /* Prevent shrinking or growing */
-            @apply rounded-lg shadow-md overflow-hidden;
         }
         .gallery img {
-            width: 100%;
-            height: 100%;
+            width: 300px;
+            height: 200px;
             object-fit: contain; /* Preserve aspect ratio */
-            @apply rounded-lg;
+            @apply rounded-lg shadow-md;
         }
         .gallery-caption {
-            @apply text-sm text-gray-600 mt-2 text-center;
+            @apply text-sm text-gray-600 mt-2 text-center w-full; /* Caption under image, full width */
         }
         @media (max-width: 640px) {
             .gallery {
-                @apply gap-2; /* Smaller gap for mobile */
+                @apply gap-2;
             }
             .gallery div {
-                width: 250px; /* Slightly smaller for mobile */
-                height: 167px; /* Maintain 3:2 ratio */
+                width: 250px;
                 flex: 0 0 250px;
+            }
+            .gallery img {
+                width: 250px;
+                height: 167px; /* Maintain 3:2 ratio */
             }
         }
     </style>
