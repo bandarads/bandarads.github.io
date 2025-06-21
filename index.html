@@ -44,26 +44,34 @@
         .hero-content a {
             color: white !important; /* Explicitly set all text to white with high specificity */
         }
-      .gallery {
-            @apply flex flex-row nowrap justify-center gap-4 mt-6 overflow-x-auto; /* Center images horizontally */
+     .gallery {
+            display: flex !important;
+            flex-direction: row !important;
+            flex-wrap: nowrap !important;
+            justify-content: flex-start !important; /* Align left for debugging */
+            gap: 1rem !important; /* Tailwind gap-4 */
+            margin-top: 1.5rem !important; /* Tailwind mt-6 */
+            overflow-x: auto !important;
+            min-width: 100%; /* Prevent container collapse */
+            padding: 0.5rem; /* Add padding for scroll visibility */
         }
         .gallery div {
-            @apply flex flex-col items-center; /* Stack image and caption vertically, centered */
-            width: 300px; /* Fixed width for uniform size */
-            flex: 0 0 300px; /* Prevent shrinking or growing */
+            @apply flex flex-col items-center;
+            width: 300px;
+            flex: 0 0 300px; /* Fixed width, no shrink/grow */
         }
         .gallery img {
             width: 300px;
             height: 200px;
-            object-fit: contain; /* Preserve aspect ratio */
+            object-fit: contain;
             @apply rounded-lg shadow-md;
         }
         .gallery-caption {
-            @apply text-sm text-gray-600 mt-2 text-center w-full; /* Caption under image, full width */
+            @apply text-sm text-gray-600 mt-2 text-center w-full;
         }
         @media (max-width: 640px) {
             .gallery {
-                @apply gap-2;
+                gap: 0.5rem !important; /* Tailwind gap-2 */
             }
             .gallery div {
                 width: 250px;
@@ -164,7 +172,7 @@
                     <ul class="list-disc pl-6">
                         <li><strong>2025:</strong> Classification of Human Trust in AI Using Brain Activity Data, Northeast Regional Conference on Complex Systems, Binghamton, NY</li>
                         <li><strong>2024:</strong> The Role of Trust in Human-Computer Interaction Using fNIRS, Yale fNIRS Workshop, New Haven, CT</li>
-                        <li><strong>2024:</strong> Logical Fallacy Detection in Text, International Conference on Computer Technology and Information Science, Ordos, China</li>
+                        <li><strong>2024:</strong> Nuanced Effect of Human trust in AI on Human-AI collaboration performance, ACM Collective Intelligence, Northeastern University, Boston, Massachusetts.</li>
                     </ul>
                 </div>
             </div>
